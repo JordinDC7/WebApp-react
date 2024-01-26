@@ -7,6 +7,7 @@ function App() {
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
         {" "}
+        {/* Provide a fallback for loading */}
         <Routes>
           {allRoutes.map((route, index) => (
             <Route

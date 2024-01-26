@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../css/rockshowhome.css";
 
 function RockShowHome() {
   return (
@@ -8,9 +7,7 @@ function RockShowHome() {
       {/* Navigation Bar */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
-          <a className="navbar-brand" href="#">
-            Rock Show
-          </a>
+          <button className="navbar-brand">Rock Show</button>
           <button
             className="navbar-toggler"
             type="button"
@@ -25,19 +22,13 @@ function RockShowHome() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="#features">
-                  Features
-                </a>
+                <button className="nav-link">Features</button>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#about">
-                  About
-                </a>
+                <button className="nav-link">About</button>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#contact">
-                  Contact
-                </a>
+                <button className="nav-link">Contact</button>
               </li>
             </ul>
           </div>
