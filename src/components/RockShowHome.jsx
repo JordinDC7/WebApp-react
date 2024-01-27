@@ -7,10 +7,10 @@ function RockShowHome() {
       {/* Navigation Bar */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
-          <button className="navbar-brand">Rock Show</button>
-          <button
+          <p className="navbar-brand">Rock Show</p>
+          <p
             className="navbar-toggler"
-            type="button"
+            type="p"
             data-toggle="collapse"
             data-target="#navbarNav"
             aria-controls="navbarNav"
@@ -18,17 +18,17 @@ function RockShowHome() {
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
-          </button>
+          </p>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item active">
-                <button className="nav-link">Features</button>
+                <p className="nav-link">Features</p>
               </li>
               <li className="nav-item">
-                <button className="nav-link">About</button>
+                <p className="nav-link">About</p>
               </li>
               <li className="nav-item">
-                <button className="nav-link">Contact</button>
+                <p className="nav-link">Contact</p>
               </li>
             </ul>
           </div>
