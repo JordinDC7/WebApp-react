@@ -1,7 +1,7 @@
 import { lazy } from "react"
-import Error404Page from "../components/Error404Page.jsx"
+import Error404Page from "../components/response/Error404Page.jsx"
 
-const Landing = lazy(() => import("../components/RockShowHome.jsx"))
+const Landing = lazy(() => import("../components/landing/RockShowHome.jsx"))
 
 
 const routes = [
