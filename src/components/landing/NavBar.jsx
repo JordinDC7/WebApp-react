@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../css/navbar.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 function NavBar() {
   return (
@@ -13,8 +14,8 @@ function NavBar() {
         <button
           className="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
         >
           <span className="navbar-toggler-icon"></span>
         </button>

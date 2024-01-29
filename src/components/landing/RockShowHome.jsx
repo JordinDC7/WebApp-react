@@ -7,6 +7,7 @@ import Footer from "./Footer";
 // import Features from "./Features";
 import NavBar from "./NavBar";
 import "../../css/rockshowhome.css";
+import { Typewriter } from "react-simple-typewriter";
 function RockShowHome() {
   return (
     <div>
@@ -16,14 +17,28 @@ function RockShowHome() {
       {/* top Section */}
       <div className="vh-100 d-flex align-items-center justify-content-center text-center top-section">
         <div>
-          <h1 className="display-4 font-weight-bold landing-text">
+          {/* <h1 className="display-4 font-weight-bold landing-text">
             Discover OracleIllusions Rocks & Gems
+          </h1> */}
+          <h1 className="display-4 font-weight-bold landing-text fw-light">
+            Discover OracleIllusions{" "}
+            <span className="fw-bold typewriter-text">
+              <Typewriter
+                words={["Rocks", "Gems", "& More"]}
+                loop={false}
+                cursor
+                cursorStyle="|"
+                typeSpeed={110}
+                deleteSpeed={110}
+                delaySpeed={1000}
+              />
+            </span>
           </h1>
           <p className="lead my-4 landing-text">
             Step into the world of pristine natural beauty. Shop our collection
             and find your perfect gem today.
           </p>
-          <a href="/shop" className="btn btn-primary btn-lg" role="button">
+          <a href="/RockShop" className="btn btn-primary btn-lg" role="button">
             Browse Shop
           </a>
         </div>

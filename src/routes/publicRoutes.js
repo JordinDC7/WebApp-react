@@ -2,7 +2,7 @@ import { lazy } from "react"
 import Error404Page from "../components/response/Error404Page.jsx"
 
 const Landing = lazy(() => import("../components/landing/RockShowHome.jsx"))
-
+const RockShop = lazy(() => import("../components/shop/RockShop.jsx"))
 
 const routes = [
     {
@@ -12,8 +12,17 @@ const routes = [
       element: Landing,
       roles: [],
       isAnonymous: true,
+    }, {
+      path: "/rockshop",
+      name: "RockShop",
+      exact: true,
+      element: RockShop,
+      roles: [],
+      isAnonymous: true,
     },
 ];
+
+
 const errorRoutes = [
     {
       path: "*",

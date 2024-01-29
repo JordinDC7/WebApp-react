@@ -1,11 +1,11 @@
 .background-image-left {
-    background-image: url('https://shorturl.at/cvwyM'); /* Path to your image */
-    background-size:contain; /* Cover the entire area of the container */
-    background-position: left; /* Center the image within the container */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    /* -moz-background-inline-policy: continuous; */
-    height: 50vh; /* Adjust the height as needed */
-    color: white; /* Adjust the text color for visibility */
+    background-image: url('https://shorturl.at/cvwyM'); 
+    background-size:contain; 
+    background-position: left; 
+    background-repeat: no-repeat; 
+   
+    height: 50vh; 
+    color: white; 
     opacity: 90%;
   }
 
