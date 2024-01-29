@@ -8,7 +8,15 @@ import Footer from "./Footer";
 import NavBar from "./NavBar";
 import "../../css/rockshowhome.css";
 import { Typewriter } from "react-simple-typewriter";
+import { useNavigate } from "react-router-dom";
+
 function RockShowHome() {
+  const navigate = useNavigate();
+
+  const goToShopPage = (e) => {
+    navigate(`/RockShop`);
+    e.preventDefault();
+  };
   return (
     <div>
       <title>Rock Show Home</title>
@@ -38,9 +46,9 @@ function RockShowHome() {
             Step into the world of pristine natural beauty. Shop our collection
             and find your perfect gem today.
           </p>
-          <a href="/RockShop" className="btn btn-primary btn-lg" role="button">
+          <button onClick={goToShopPage} className="btn btn-primary btn-lg">
             Browse Shop
-          </a>
+          </button>
         </div>
       </div>
 
@@ -50,11 +58,10 @@ function RockShowHome() {
       </div>
 
       {/* bottom Section */}
-      <div className="vh-100 d-flex align-items-center justify-content-center text-center bottom-section">
+      <div className="vh-100 d-flex align-items-center justify-content-center text-center bottom-section main-wrapper">
         <div>{/* Content for the bottom section */}</div>
+        <Footer></Footer>
       </div>
-
-      <Footer></Footer>
     </div>
   );
 }

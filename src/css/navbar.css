@@ -35,11 +35,20 @@
   }
 
   .fixed-footer {
-    position: relative;
+    position: absolute; 
     bottom: 0;
     left: 0;
     right: 0;
-    max-height: 65px;
+    height: 65px;
+
   }
+
+  .main-wrapper {
+    position: relative;
+    min-height: 100vh; 
+    margin: 0; 
+  }
+  
+  
   
   
