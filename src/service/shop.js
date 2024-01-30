@@ -2,13 +2,14 @@ import axios from "axios";
 
 
 const rockShowService = {
-    endpoint: "https://localhost:7286/api"
+    developement: "https://localhost:7286/api",
+    production: "https://oracleillusions.azurewebsites.net/api"
 }
 
 const getAll = () => {
     const config = {
         method: "GET",
-        url: `${rockShowService.endpoint}/RockShow`,
+        url: `${rockShowService.production}/RockShow`,
         withCredentials: true,
         crossdomain: true,
         headers: { "Content-Type": "application/json"},
