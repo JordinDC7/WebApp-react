@@ -14,21 +14,14 @@ import { useNavigate } from "react-router-dom";
 function RockShowHome() {
   const navigate = useNavigate();
 
-  const fetchDataAndWakeUpDatabase = async () => {
-    try {
-      console.log("Firing Wakeup Call");
-      await rockShowService.getAll();
-    } catch (error) {
-      console.error("Error waking up the database:", error);
-    }
+  const fetchDataAndWakeUpDatabase = () => {
+    console.log("Firing Wakeup");
+    rockShowService.getAll();
   };
 
   useEffect(() => {
     fetchDataAndWakeUpDatabase();
     console.log("Component mounted");
-    return () => {
-      fetchDataAndWakeUpDatabase();
-    };
   }, []);
 
   const goToShopPage = (e) => {
