@@ -1,6 +1,7 @@
-import React from "react";
+import { React, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./Footer";
+import rockShowService from "../../service/shop";
 // import ContactUs from "./ContactUs";
 // import AboutUs from "./AboutUs";
 // import Hero from "./Hero";
@@ -13,9 +14,26 @@ import { useNavigate } from "react-router-dom";
 function RockShowHome() {
   const navigate = useNavigate();
 
+  const fetchDataAndWakeUpDatabase = async () => {
+    try {
+      console.log("Firing Wakeup Call");
+      await rockShowService.getAll();
+    } catch (error) {
+      console.error("Error waking up the database:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchDataAndWakeUpDatabase();
+    console.log("Component mounted");
+    return () => {
+      fetchDataAndWakeUpDatabase();
+    };
+  }, []);
+
   const goToShopPage = (e) => {
-    navigate(`/RockShop`);
     e.preventDefault();
+    navigate("/RockShop"); // Pass as 'items' array
   };
   return (
     <div>

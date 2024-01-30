@@ -1,7 +1,29 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import MapRocks from "./MapRocks";
+import rockShowService from "../../service/shop";
 
-function GridLayout({ rockState }) {
+function GridLayout() {
+  const [rockState, setRockState] = useState([]);
+
+  useEffect(() => {
+    rockShowService.getAll().then(onGetRocksSuccess).catch(onGetRocksError);
+  }, []);
+
+  const onGetRocksSuccess = (response) => {
+    console.log(response.data.items);
+    const data = response.data.items;
+
+    setRockState((prevState) => {
+      const oldState = { ...prevState };
+      let newState = oldState;
+      newState = { ...data };
+
+      return newState;
+    });
+  };
+  const onGetRocksError = (error) => {
+    console.error(error);
+  };
   return (
     <div>
       {/* <h3 className="display-4 font-weight-bold landing-text fw-light">
