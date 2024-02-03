@@ -2,7 +2,7 @@ import { React, useEffect, useState } from "react";
 import MapRocks from "./MapRocks";
 import rockShowService from "../../service/shop";
 
-function GridLayout() {
+function FlexLayout() {
   const [rockState, setRockState] = useState([]);
 
   useEffect(() => {
@@ -45,4 +45,4 @@ function GridLayout() {
   );
 }
 
-export default GridLayout;
+export default FlexLayout;

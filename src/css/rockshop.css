@@ -20,7 +20,7 @@
     max-height: 65px;
   }
 
-  .rock-shop-head {
+  /* .rock-shop-head {
     text-align: left;
     margin-top: 3%;
     display: inline-block;
@@ -28,27 +28,26 @@
     margin-left: -15%;
     padding: 20px;
     
-  }
+  } */
 
   .typewriter-text {
     color: #6933ff;
   }
   .top-section {
     background: linear-gradient(to right, #6933ff, #24001a); 
-    height: 100vh;
+    height: 33%; 
   }
  
   .middle-section {
     background: linear-gradient(to right, #24001a, #000000); 
-    height: 100vh;
-    width: auto;
+    width: 100%;
+    height: 33%; 
   }
   
  
   .bottom-section {
     background: linear-gradient(to right, #000000, #6933ff);
-    height: 100vh;
-    
+    height: 33%;
   }
 
   .landing-text {
